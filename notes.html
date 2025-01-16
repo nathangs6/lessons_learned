@@ -1,0 +1,15 @@
+---
+title: Notes
+---
+<h1>
+    Notes
+</h1>
+<ul>
+    {% for post in site.posts %}
+    <li>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        {% assign a = post.excerpt | split: '.' %}
+        {{ a[0] }}
+    </li>
+    {% endfor %}
+</ul>
